@@ -1,0 +1,9 @@
+FROM node:stretch-slim
+
+WORKDIR /app
+
+COPY $PWD/spa/node_modules/vue/package.json  /app/.
+
+RUN npm install
+
+RUN npm run build
